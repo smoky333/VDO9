@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Кликер</h1>
+    <p class="fs-4">Ваши клики: <strong>{{ current_user.clicks }}</strong></p>
+    <form method="post" action="{{ url_for('routes.click') }}">
+        <button type="submit" class="btn btn-primary btn-lg">Кликнуть</button>
+    </form>
+</div>
+{% endblock %}
